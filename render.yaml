@@ -1,7 +1,7 @@
 services:
   - type: web
     name: n8n
-    env: docker
+    runtime: docker
     region: frankfurt # optional (defaults to oregon)
     plan: free # optional (defaults to starter)
     branch: main # optional (defaults to master)
@@ -24,7 +24,7 @@ services:
           property: port
       - key: DB_POSTGRESDB_USER
         fromDatabase:
-          name: n8nDB
+          name: n8nDB 
           property: user
       - key: DB_POSTGRESDB_PASSWORD
         fromDatabase:
